@@ -1,0 +1,591 @@
+{
+  "timestamp": "2026-01-04T17:29:45.988745",
+  "config": {
+    "seed": 42,
+    "embedding_dim": 768,
+    "run_empirical": true,
+    "num_samples": 15
+  },
+  "mechanism_analysis": {
+    "k=1": {
+      "continuous_thought": {
+        "token_type": "continuous_thought",
+        "computational_depth": 1,
+        "superposition_capacity": 27,
+        "effective_search_width": 2,
+        "information_capacity_bits": 6144.0,
+        "can_encode_multiple_paths": true,
+        "training_signal": "hidden_state_prediction",
+        "limitations": [
+          "Requires multi-stage training",
+          "Hidden representations are not interpretable",
+          "Harder to debug reasoning failures"
+        ]
+      },
+      "pause_token": {
+        "token_type": "pause_token",
+        "computational_depth_increase": 1,
+        "circuit_depth_boost": "+O(1)",
+        "expressivity_class": "TC^0 + depth(k)",
+        "information_capacity_bits": 6144.0,
+        "can_encode_multiple_paths": false,
+        "training_signal": "standard_lm_loss",
+        "limitations": [
+          "Noisy gradients from single-token embedding",
+          "Training instabilities (per 2411.11371)",
+          "Cannot encode parallel search paths",
+          "Harder to scale beyond ~10 tokens"
+        ]
+      },
+      "perception_token": {
+        "token_type": "perception_token",
+        "visual_capacity": "1024 discrete states per token",
+        "total_states": 1024,
+        "semantic_encoding": [
+          "depth",
+          "edges",
+          "objects",
+          "spatial_relations"
+        ],
+        "information_capacity_bits": 10.0,
+        "can_encode_multiple_paths": false,
+        "training_signal": "vqvae_reconstruction + task_loss",
+        "advantages": [
+          "Interpretable visual reasoning",
+          "Can be supervised by visual experts",
+          "Enables visual chain-of-thought"
+        ],
+        "limitations": [
+          "Discretization loses information",
+          "Requires specialized visual encoders",
+          "Codebook may not capture all relevant features"
+        ]
+      }
+    },
+    "k=3": {
+      "continuous_thought": {
+        "token_type": "continuous_thought",
+        "computational_depth": 3,
+        "superposition_capacity": 83,
+        "effective_search_width": 8,
+        "information_capacity_bits": 6144.0,
+        "can_encode_multiple_paths": true,
+        "training_signal": "hidden_state_prediction",
+        "limitations": [
+          "Requires multi-stage training",
+          "Hidden representations are not interpretable",
+          "Harder to debug reasoning failures"
+        ]
+      },
+      "pause_token": {
+        "token_type": "pause_token",
+        "computational_depth_increase": 3,
+        "circuit_depth_boost": "+O(3)",
+        "expressivity_class": "TC^0 + depth(k)",
+        "information_capacity_bits": 18432.0,
+        "can_encode_multiple_paths": false,
+        "training_signal": "standard_lm_loss",
+        "limitations": [
+          "Noisy gradients from single-token embedding",
+          "Training instabilities (per 2411.11371)",
+          "Cannot encode parallel search paths",
+          "Harder to scale beyond ~10 tokens"
+        ]
+      },
+      "perception_token": {
+        "token_type": "perception_token",
+        "visual_capacity": "1024 discrete states per token",
+        "total_states": 1073741824,
+        "semantic_encoding": [
+          "depth",
+          "edges",
+          "objects",
+          "spatial_relations"
+        ],
+        "information_capacity_bits": 30.0,
+        "can_encode_multiple_paths": false,
+        "training_signal": "vqvae_reconstruction + task_loss",
+        "advantages": [
+          "Interpretable visual reasoning",
+          "Can be supervised by visual experts",
+          "Enables visual chain-of-thought"
+        ],
+        "limitations": [
+          "Discretization loses information",
+          "Requires specialized visual encoders",
+          "Codebook may not capture all relevant features"
+        ]
+      }
+    },
+    "k=5": {
+      "continuous_thought": {
+        "token_type": "continuous_thought",
+        "computational_depth": 5,
+        "superposition_capacity": 138,
+        "effective_search_width": 32,
+        "information_capacity_bits": 6144.0,
+        "can_encode_multiple_paths": true,
+        "training_signal": "hidden_state_prediction",
+        "limitations": [
+          "Requires multi-stage training",
+          "Hidden representations are not interpretable",
+          "Harder to debug reasoning failures"
+        ]
+      },
+      "pause_token": {
+        "token_type": "pause_token",
+        "computational_depth_increase": 5,
+        "circuit_depth_boost": "+O(5)",
+        "expressivity_class": "TC^0 + depth(k)",
+        "information_capacity_bits": 30720.0,
+        "can_encode_multiple_paths": false,
+        "training_signal": "standard_lm_loss",
+        "limitations": [
+          "Noisy gradients from single-token embedding",
+          "Training instabilities (per 2411.11371)",
+          "Cannot encode parallel search paths",
+          "Harder to scale beyond ~10 tokens"
+        ]
+      },
+      "perception_token": {
+        "token_type": "perception_token",
+        "visual_capacity": "1024 discrete states per token",
+        "total_states": 1125899906842624,
+        "semantic_encoding": [
+          "depth",
+          "edges",
+          "objects",
+          "spatial_relations"
+        ],
+        "information_capacity_bits": 50.0,
+        "can_encode_multiple_paths": false,
+        "training_signal": "vqvae_reconstruction + task_loss",
+        "advantages": [
+          "Interpretable visual reasoning",
+          "Can be supervised by visual experts",
+          "Enables visual chain-of-thought"
+        ],
+        "limitations": [
+          "Discretization loses information",
+          "Requires specialized visual encoders",
+          "Codebook may not capture all relevant features"
+        ]
+      }
+    },
+    "k=10": {
+      "continuous_thought": {
+        "token_type": "continuous_thought",
+        "computational_depth": 10,
+        "superposition_capacity": 277,
+        "effective_search_width": 277,
+        "information_capacity_bits": 6144.0,
+        "can_encode_multiple_paths": true,
+        "training_signal": "hidden_state_prediction",
+        "limitations": [
+          "Requires multi-stage training",
+          "Hidden representations are not interpretable",
+          "Harder to debug reasoning failures"
+        ]
+      },
+      "pause_token": {
+        "token_type": "pause_token",
+        "computational_depth_increase": 10,
+        "circuit_depth_boost": "+O(10)",
+        "expressivity_class": "TC^0 + depth(k)",
+        "information_capacity_bits": 61440.0,
+        "can_encode_multiple_paths": false,
+        "training_signal": "standard_lm_loss",
+        "limitations": [
+          "Noisy gradients from single-token embedding",
+          "Training instabilities (per 2411.11371)",
+          "Cannot encode parallel search paths",
+          "Harder to scale beyond ~10 tokens"
+        ]
+      },
+      "perception_token": {
+        "token_type": "perception_token",
+        "visual_capacity": "1024 discrete states per token",
+        "total_states": 1267650600228229401496703205376,
+        "semantic_encoding": [
+          "depth",
+          "edges",
+          "objects",
+          "spatial_relations"
+        ],
+        "information_capacity_bits": 100.0,
+        "can_encode_multiple_paths": false,
+        "training_signal": "vqvae_reconstruction + task_loss",
+        "advantages": [
+          "Interpretable visual reasoning",
+          "Can be supervised by visual experts",
+          "Enables visual chain-of-thought"
+        ],
+        "limitations": [
+          "Discretization loses information",
+          "Requires specialized visual encoders",
+          "Codebook may not capture all relevant features"
+        ]
+      }
+    }
+  },
+  "information_flow": {
+    "trajectory": {
+      "num_steps": 4,
+      "avg_step_similarity": 0.3108817934576669,
+      "similarity_variance": 0.04419850278896701,
+      "norm_growth": 165.09037502354033,
+      "avg_info_content": 904.4599164608175,
+      "info_content_change": 3779.359716882916,
+      "trajectory_length": 271.59184178333
+    },
+    "preservation_by_steps": {
+      "1": 0.01284922471142603,
+      "3": 0.001222187032151714,
+      "5": -0.011754834695307208
+    }
+  },
+  "expressivity_comparison": {
+    "continuous_thought": {
+      "token_type": "continuous_thought",
+      "computational_depth": 5,
+      "superposition_capacity": 138,
+      "effective_search_width": 32,
+      "information_capacity_bits": 6144.0,
+      "can_encode_multiple_paths": true,
+      "training_signal": "hidden_state_prediction",
+      "limitations": [
+        "Requires multi-stage training",
+        "Hidden representations are not interpretable",
+        "Harder to debug reasoning failures"
+      ]
+    },
+    "pause_token": {
+      "token_type": "pause_token",
+      "computational_depth_increase": 5,
+      "circuit_depth_boost": "+O(5)",
+      "expressivity_class": "TC^0 + depth(k)",
+      "information_capacity_bits": 30720.0,
+      "can_encode_multiple_paths": false,
+      "training_signal": "standard_lm_loss",
+      "limitations": [
+        "Noisy gradients from single-token embedding",
+        "Training instabilities (per 2411.11371)",
+        "Cannot encode parallel search paths",
+        "Harder to scale beyond ~10 tokens"
+      ]
+    },
+    "perception_token": {
+      "token_type": "perception_token",
+      "visual_capacity": "1024 discrete states per token",
+      "total_states": 1125899906842624,
+      "semantic_encoding": [
+        "depth",
+        "edges",
+        "objects",
+        "spatial_relations"
+      ],
+      "information_capacity_bits": 50.0,
+      "can_encode_multiple_paths": false,
+      "training_signal": "vqvae_reconstruction + task_loss",
+      "advantages": [
+        "Interpretable visual reasoning",
+        "Can be supervised by visual experts",
+        "Enables visual chain-of-thought"
+      ],
+      "limitations": [
+        "Discretization loses information",
+        "Requires specialized visual encoders",
+        "Codebook may not capture all relevant features"
+      ]
+    },
+    "comparison": {
+      "most_expressive_for_search": "continuous_thought",
+      "most_expressive_for_depth": "pause_token",
+      "most_interpretable": "perception_token",
+      "theoretical_ordering": [
+        "continuous_thought >= pause_token >= no_tokens",
+        "perception_token \u2248 pause_token (task-dependent)"
+      ]
+    }
+  },
+  "reconstruction_reasoning": {
+    "input_1024_tokens_1": {
+      "input_dim": 1024,
+      "hidden_dim": 768,
+      "num_tokens": 1,
+      "bottleneck_capacity": 768,
+      "compression_ratio": 1.3333333333333333,
+      "theoretical_capacity_bits": 6144.0,
+      "can_preserve_all_info": false,
+      "information_loss_estimate": 0.25
+    },
+    "input_1024_tokens_5": {
+      "input_dim": 1024,
+      "hidden_dim": 768,
+      "num_tokens": 5,
+      "bottleneck_capacity": 3840,
+      "compression_ratio": 0.26666666666666666,
+      "theoretical_capacity_bits": 30720.0,
+      "can_preserve_all_info": true,
+      "information_loss_estimate": 0
+    },
+    "input_1024_tokens_10": {
+      "input_dim": 1024,
+      "hidden_dim": 768,
+      "num_tokens": 10,
+      "bottleneck_capacity": 7680,
+      "compression_ratio": 0.13333333333333333,
+      "theoretical_capacity_bits": 61440.0,
+      "can_preserve_all_info": true,
+      "information_loss_estimate": 0
+    },
+    "input_2048_tokens_1": {
+      "input_dim": 2048,
+      "hidden_dim": 768,
+      "num_tokens": 1,
+      "bottleneck_capacity": 768,
+      "compression_ratio": 2.6666666666666665,
+      "theoretical_capacity_bits": 6144.0,
+      "can_preserve_all_info": false,
+      "information_loss_estimate": 0.625
+    },
+    "input_2048_tokens_5": {
+      "input_dim": 2048,
+      "hidden_dim": 768,
+      "num_tokens": 5,
+      "bottleneck_capacity": 3840,
+      "compression_ratio": 0.5333333333333333,
+      "theoretical_capacity_bits": 30720.0,
+      "can_preserve_all_info": true,
+      "information_loss_estimate": 0
+    },
+    "input_2048_tokens_10": {
+      "input_dim": 2048,
+      "hidden_dim": 768,
+      "num_tokens": 10,
+      "bottleneck_capacity": 7680,
+      "compression_ratio": 0.26666666666666666,
+      "theoretical_capacity_bits": 61440.0,
+      "can_preserve_all_info": true,
+      "information_loss_estimate": 0
+    },
+    "input_4096_tokens_1": {
+      "input_dim": 4096,
+      "hidden_dim": 768,
+      "num_tokens": 1,
+      "bottleneck_capacity": 768,
+      "compression_ratio": 5.333333333333333,
+      "theoretical_capacity_bits": 6144.0,
+      "can_preserve_all_info": false,
+      "information_loss_estimate": 0.8125
+    },
+    "input_4096_tokens_5": {
+      "input_dim": 4096,
+      "hidden_dim": 768,
+      "num_tokens": 5,
+      "bottleneck_capacity": 3840,
+      "compression_ratio": 1.0666666666666667,
+      "theoretical_capacity_bits": 30720.0,
+      "can_preserve_all_info": false,
+      "information_loss_estimate": 0.0625
+    },
+    "input_4096_tokens_10": {
+      "input_dim": 4096,
+      "hidden_dim": 768,
+      "num_tokens": 10,
+      "bottleneck_capacity": 7680,
+      "compression_ratio": 0.5333333333333333,
+      "theoretical_capacity_bits": 61440.0,
+      "can_preserve_all_info": true,
+      "information_loss_estimate": 0
+    },
+    "trade_offs": [
+      {
+        "reconstruction_emphasis": 0.1,
+        "reasoning_emphasis": 0.9,
+        "expected_behavior": {
+          "high_reconstruction": "Better visual fidelity, may miss task-irrelevant features",
+          "high_reasoning": "Task-focused, may lose visual detail",
+          "balanced": "Trade-off between fidelity and task performance"
+        },
+        "recommended_range": {
+          "reconstruction_weight": [
+            0.1,
+            0.5
+          ],
+          "reasoning_weight": [
+            0.5,
+            0.9
+          ]
+        }
+      },
+      {
+        "reconstruction_emphasis": 0.3,
+        "reasoning_emphasis": 0.7,
+        "expected_behavior": {
+          "high_reconstruction": "Better visual fidelity, may miss task-irrelevant features",
+          "high_reasoning": "Task-focused, may lose visual detail",
+          "balanced": "Trade-off between fidelity and task performance"
+        },
+        "recommended_range": {
+          "reconstruction_weight": [
+            0.1,
+            0.5
+          ],
+          "reasoning_weight": [
+            0.5,
+            0.9
+          ]
+        }
+      },
+      {
+        "reconstruction_emphasis": 0.5,
+        "reasoning_emphasis": 0.5,
+        "expected_behavior": {
+          "high_reconstruction": "Better visual fidelity, may miss task-irrelevant features",
+          "high_reasoning": "Task-focused, may lose visual detail",
+          "balanced": "Trade-off between fidelity and task performance"
+        },
+        "recommended_range": {
+          "reconstruction_weight": [
+            0.1,
+            0.5
+          ],
+          "reasoning_weight": [
+            0.5,
+            0.9
+          ]
+        }
+      },
+      {
+        "reconstruction_emphasis": 0.7,
+        "reasoning_emphasis": 0.30000000000000004,
+        "expected_behavior": {
+          "high_reconstruction": "Better visual fidelity, may miss task-irrelevant features",
+          "high_reasoning": "Task-focused, may lose visual detail",
+          "balanced": "Trade-off between fidelity and task performance"
+        },
+        "recommended_range": {
+          "reconstruction_weight": [
+            0.1,
+            0.5
+          ],
+          "reasoning_weight": [
+            0.5,
+            0.9
+          ]
+        }
+      },
+      {
+        "reconstruction_emphasis": 0.9,
+        "reasoning_emphasis": 0.09999999999999998,
+        "expected_behavior": {
+          "high_reconstruction": "Better visual fidelity, may miss task-irrelevant features",
+          "high_reasoning": "Task-focused, may lose visual detail",
+          "balanced": "Trade-off between fidelity and task performance"
+        },
+        "recommended_range": {
+          "reconstruction_weight": [
+            0.1,
+            0.5
+          ],
+          "reasoning_weight": [
+            0.5,
+            0.9
+          ]
+        }
+      }
+    ]
+  },
+  "framework_summary": {
+    "framework_name": "Latent Visual Reasoning Token Dynamics (LVRTD)",
+    "version": "1.0",
+    "components": {
+      "state_space": {
+        "description": "Latent states z \u2208 \u211d^d in embedding space",
+        "properties": [
+          "norm",
+          "information_content",
+          "similarity"
+        ]
+      },
+      "dynamics": {
+        "description": "Transition function T: Z \u00d7 X \u2192 Z",
+        "properties": [
+          "jacobian",
+          "stability",
+          "contractivity"
+        ]
+      },
+      "token_types": {
+        "continuous_thought": "Hidden state propagation, enables BFS",
+        "pause_token": "Learnable delay tokens, increases depth",
+        "perception_token": "Visual semantic tokens, interpretable"
+      },
+      "analysis_tools": {
+        "information_flow": "Mutual information, preservation, gain",
+        "expressivity": "Circuit complexity, computational bounds",
+        "reconstruction_reasoning": "Trade-off analysis"
+      }
+    },
+    "key_theoretical_results": [
+      "Pause tokens strictly increase expressivity (2505.21024)",
+      "Continuous thought enables BFS via superposition (Coconut)",
+      "Reconstruction loss implicitly encodes reasoning (LVR)",
+      "Training instabilities limit pause token effectiveness (2411.11371)"
+    ],
+    "design_principles": [
+      "Choose mechanism based on task type (search vs depth vs interpretability)",
+      "Number of tokens trades off compute vs expressivity",
+      "Reconstruction objective should balance with task objective",
+      "Multi-stage training helps for continuous thought"
+    ]
+  },
+  "empirical_validation": {
+    "config": {
+      "model": "gpt-4o-mini",
+      "num_samples": 15,
+      "seed": 42
+    },
+    "experiments": {
+      "approach_direct": {
+        "accuracy": 0.2,
+        "avg_tokens": 1.0,
+        "avg_latency_ms": 752.7448654174805,
+        "n_samples": 5
+      },
+      "approach_cot": {
+        "accuracy": 0.2,
+        "avg_tokens": 362.2,
+        "avg_latency_ms": 6327.137660980225,
+        "n_samples": 5
+      },
+      "approach_structured_cot": {
+        "accuracy": 0.4,
+        "avg_tokens": 94.8,
+        "avg_latency_ms": 2443.2281970977783,
+        "n_samples": 5
+      },
+      "token_count": {
+        "1": {
+          "accuracy": 0.6,
+          "avg_response_tokens": 61.8,
+          "avg_latency_ms": 1699.1118431091309,
+          "n_samples": 5
+        },
+        "3": {
+          "accuracy": 0.2,
+          "avg_response_tokens": 98.8,
+          "avg_latency_ms": 3552.745246887207,
+          "n_samples": 5
+        },
+        "5": {
+          "accuracy": 0.4,
+          "avg_response_tokens": 109.6,
+          "avg_latency_ms": 1944.9408054351807,
+          "n_samples": 5
+        }
+      }
+    }
+  }
+}

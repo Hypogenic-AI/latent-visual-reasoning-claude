@@ -1,0 +1,57 @@
+[
+  {
+    "image": "000000451431.jpg",
+    "image_link": "http://images.cocodataset.org/train2017/000000451431.jpg",
+    "caption": "The person is inside the refrigerator.",
+    "label": 1,
+    "relation": "inside",
+    "annotator_id": 29,
+    "vote_true_validator_id": "[2, 9]",
+    "vote_false_validator_id": "[3]",
+    "reference_frame": null
+  },
+  {
+    "image": "000000287427.jpg",
+    "image_link": "http://images.cocodataset.org/train2017/000000287427.jpg",
+    "caption": "The cake consists of the dog.",
+    "label": 1,
+    "relation": "consists of",
+    "annotator_id": 4,
+    "vote_true_validator_id": "[3, 54, 2]",
+    "vote_false_validator_id": "[]",
+    "reference_frame": null
+  },
+  {
+    "image": "000000072556.jpg",
+    "image_link": "http://images.cocodataset.org/train2017/000000072556.jpg",
+    "caption": "The bird is above the cat.",
+    "label": 0,
+    "relation": "above",
+    "annotator_id": 27,
+    "vote_true_validator_id": "[]",
+    "vote_false_validator_id": "[2, 17, 52]",
+    "reference_frame": null
+  },
+  {
+    "image": "000000519404.jpg",
+    "image_link": "http://images.cocodataset.org/train2017/000000519404.jpg",
+    "caption": "The laptop is facing the sandwich.",
+    "label": 0,
+    "relation": "facing",
+    "annotator_id": 30,
+    "vote_true_validator_id": "[]",
+    "vote_false_validator_id": "[2, 22, 64]",
+    "reference_frame": null
+  },
+  {
+    "image": "000000294749.jpg",
+    "image_link": "http://images.cocodataset.org/train2017/000000294749.jpg",
+    "caption": "The elephant is inside the truck.",
+    "label": 0,
+    "relation": "inside",
+    "annotator_id": 30,
+    "vote_true_validator_id": "[]",
+    "vote_false_validator_id": "[2, 62, 1]",
+    "reference_frame": null
+  }
+]

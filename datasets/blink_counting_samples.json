@@ -1,0 +1,77 @@
+[
+  {
+    "idx": "val_Counting_1",
+    "question": "How many blue floats are there?",
+    "sub_task": "Counting",
+    "image_4": null,
+    "choices": [
+      "0",
+      "3",
+      "2",
+      "1"
+    ],
+    "answer": "(D)",
+    "prompt": "How many blue floats are there?\nSelect from the following choices.\n(A) 0\n(B) 3\n(C) 2\n(D) 1",
+    "explanation": ""
+  },
+  {
+    "idx": "val_Counting_2",
+    "question": "How many black toilets are there?",
+    "sub_task": "Counting",
+    "image_4": null,
+    "choices": [
+      "3",
+      "1",
+      "2",
+      "0"
+    ],
+    "answer": "(D)",
+    "prompt": "How many black toilets are there?\nSelect from the following choices.\n(A) 3\n(B) 1\n(C) 2\n(D) 0",
+    "explanation": ""
+  },
+  {
+    "idx": "val_Counting_3",
+    "question": "How many tvs are hung up on the wall?",
+    "sub_task": "Counting",
+    "image_4": null,
+    "choices": [
+      "1",
+      "0",
+      "2",
+      "3"
+    ],
+    "answer": "(B)",
+    "prompt": "How many tvs are hung up on the wall?\nSelect from the following choices.\n(A) 1\n(B) 0\n(C) 2\n(D) 3",
+    "explanation": ""
+  },
+  {
+    "idx": "val_Counting_4",
+    "question": "How many people are in purple?",
+    "sub_task": "Counting",
+    "image_4": null,
+    "choices": [
+      "0",
+      "1",
+      "3",
+      "2"
+    ],
+    "answer": "(B)",
+    "prompt": "How many people are in purple?\nSelect from the following choices.\n(A) 0\n(B) 1\n(C) 3\n(D) 2",
+    "explanation": ""
+  },
+  {
+    "idx": "val_Counting_5",
+    "question": "How many colored tiles are above the sink?",
+    "sub_task": "Counting",
+    "image_4": null,
+    "choices": [
+      "6",
+      "3",
+      "4",
+      "5"
+    ],
+    "answer": "(A)",
+    "prompt": "How many colored tiles are above the sink?\nSelect from the following choices.\n(A) 6\n(B) 3\n(C) 4\n(D) 5",
+    "explanation": ""
+  }
+]

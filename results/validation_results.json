@@ -1,0 +1,47 @@
+{
+  "config": {
+    "model": "gpt-4o-mini",
+    "num_samples": 15,
+    "seed": 42
+  },
+  "experiments": {
+    "approach_direct": {
+      "accuracy": 0.2,
+      "avg_tokens": 1.0,
+      "avg_latency_ms": 752.7448654174805,
+      "n_samples": 5
+    },
+    "approach_cot": {
+      "accuracy": 0.2,
+      "avg_tokens": 362.2,
+      "avg_latency_ms": 6327.137660980225,
+      "n_samples": 5
+    },
+    "approach_structured_cot": {
+      "accuracy": 0.4,
+      "avg_tokens": 94.8,
+      "avg_latency_ms": 2443.2281970977783,
+      "n_samples": 5
+    },
+    "token_count": {
+      "1": {
+        "accuracy": 0.6,
+        "avg_response_tokens": 61.8,
+        "avg_latency_ms": 1699.1118431091309,
+        "n_samples": 5
+      },
+      "3": {
+        "accuracy": 0.2,
+        "avg_response_tokens": 98.8,
+        "avg_latency_ms": 3552.745246887207,
+        "n_samples": 5
+      },
+      "5": {
+        "accuracy": 0.4,
+        "avg_response_tokens": 109.6,
+        "avg_latency_ms": 1944.9408054351807,
+        "n_samples": 5
+      }
+    }
+  }
+}
